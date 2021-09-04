@@ -1,4 +1,11 @@
-; We represent clock in mm:ss format
+; Author: Utkarsh Patel (18EC35034)
+; 
+; Specification:
+; Design a digital clock using the 7-segment display modules. The clock normally displays the time in mm-ss format
+; It updates time automatically using the timer interrupt of the microcontroller.
+; 
+; Run this file with Update Freq 100
+
 mov 30H,#00                 ; temporary location to store m1
 mov 31H,#00                 ; temporary location to store m0
 mov 32H,#00                 ; temporary location to store s1
