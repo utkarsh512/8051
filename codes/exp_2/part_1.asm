@@ -6,10 +6,22 @@
 ; 
 ; Run this file with Update Freq 100
 
-mov 30H,#00                 ; temporary location to store m1
-mov 31H,#00                 ; temporary location to store m0
-mov 32H,#00                 ; temporary location to store s1
-mov 33H,#00                 ; temporary location to store s0
+org 0000H    
+mov 70H, #11000000B          ; Codes for digits stored from 70H
+mov 71H, #11111001B
+mov 72H, #10100100B
+mov 73H, #10110000B
+mov 74H, #10011001B
+mov 75H, #10010010B
+mov 76H, #10000010B
+mov 77H, #11111000B
+mov 78H, #10000000B
+mov 79H, #10010000B 
+
+mov 30H, #00                 ; temporary location to store m1
+mov 31H, #00                 ; temporary location to store m0
+mov 32H, #00                 ; temporary location to store s1
+mov 33H, #00                 ; temporary location to store s0
 mov TMOD,#00H               ; setting TMOD
 
 start:
