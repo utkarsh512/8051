@@ -1,7 +1,7 @@
 ; Author: Utkarsh Patel (18EC35034)
 ; 
 ; Specification: Ramp Signal Generation
-; Display inverted ramp signal on the DAC Scope. Change the slope of the ramp signal to 30o and 60 o
+; Display inverted ramp signal on the DAC Scope. Change the slope of the ramp signal to 30 degrees and 60 degrees
 ; 
 ; Run this code with update frequency 100
 
