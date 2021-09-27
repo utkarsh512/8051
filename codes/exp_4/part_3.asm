@@ -16,7 +16,7 @@ OT EQU 40H       ; on time
 FT EQU 50H       ; off time
 
 start:
-  MOV A,#00H     ; initializing accumulator to zero
+  MOV A, #00H    ; initializing accumulator to zero
 
 rise:
   MOV P1, A      ; moving content of accumulator to ADC input (to P1)
@@ -29,17 +29,17 @@ logicHigh:       ; DUTY ON
   DJNZ R7, logicHigh 
 
 temp:            ; temp module added to fix the falling condition
-  MOV P1,A       
-  SUBB A,#N1     
+  MOV P1, A       
+  SUBB A, #N1     
 
 fall:
-  MOV P1,A       ; moving content of accumulator to ADC input (to P1)
-  SUBB A,#N      ; decrementing accumulator (during fall time)
+  MOV P1, A      ; moving content of accumulator to ADC input (to P1)
+  SUBB A, #N     ; decrementing accumulator (during fall time)
   JNZ fall       ; while accumulator is not zero, keep decrementing
   MOV P1, A;
   MOV R7, #FT;
 
 logicLow:        ; DUTY OFF
-  DJNZ R7,logicLow;
+  DJNZ R7, logicLow;
 
 SJMP start
